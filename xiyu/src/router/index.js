@@ -32,7 +32,7 @@ export default new Router({
     {
     	path:'/classify',
     	name:'classify',
-    	component:Classify
+      component: Classify,
     },
     {
       path: '/message',
