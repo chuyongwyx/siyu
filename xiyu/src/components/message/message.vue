@@ -1,12 +1,12 @@
 <template>
 	<div>
-		资讯
+		资源社区
 	</div>
 </template>
 
 <script>
 	export default{
-		
+
 	}
 </script>
 
