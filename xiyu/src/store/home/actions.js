@@ -1,9 +1,19 @@
-import {HomeData} from "../../apis/home";
+import {HomeData,HomeHotShopData,HomePro} from "../../apis/home";
 export default {
    async handleHomeData(){
-//      let data = await HomeData({os:3});
-//      console.log(data);
 		let data = await HomeData();
-		console.log(data);
-    }
+		this.state.home.homeGoods =data;
+   },
+   async  handleHomeAdsData(){
+   		let hotdata= await HomeHotShopData();
+// 		console.log(hotdata.data.displaySkus);
+   		this.state.home.hotShop.push(hotdata.data.displaySkus)
+   },
+   
+   async handleComProduct(){
+   		let proData = await HomePro();
+// 		console.log(proData.data);
+		this.state.home.comPro.push(proData.data)
+   }
+   
 }
