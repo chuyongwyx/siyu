@@ -16,6 +16,8 @@ import Bearing from '../components/home/findclass/bearing/bearing'
 import Pneummatic from '../components/home/findclass/pneummatic/pneummatic'
 import Instruments from '../components/home/findclass/instruments/instruments'
 import ChannelList from '../components/home/findclass/channel-list/channel-list' 
+
+import Ads from '../components/home/findclass/firstmore/more'
 Vue.use(Router)
 
 export default new Router({
@@ -99,6 +101,11 @@ export default new Router({
     	path:'/channel-list',
     	name:'channel-list',
     	component:ChannelList
+    },
+    {
+    	path:'/more',
+    	name:'more',
+    	component:Ads
     },
     {
     	path:'**',
