@@ -5,7 +5,7 @@
 			<div class="txt">
 				<a href="">元旦特辑-新年伊始</a>
 			</div>
-			<div class="txt">更多 ></div>
+			<div class="txt" @click="handleclick()">更多 ></div>
 		</div>
 		<div class="settime">
 			<div class="s_time"><span>限时特惠</span></div>
@@ -42,7 +42,12 @@
 				imgAd: state => state.home.ad
 			})
 		},
-	
+		methods:{
+			handleclick(){
+				
+				this.$router.push('/more');
+			}
+		},
 		mounted() {
 		 let times = setInterval(function() {
 				let startDate = new Date();
