@@ -1,6 +1,6 @@
 <template>
 	<div class="header">
-		<div class="headers ind==index?spe:''" v-for="(item,index) in header" @click="handleClick(index)">{{item}}</div>
+		<div class="headers " :class="ind==index?'spe':''" v-for="(item,index) in header" @click="handleClick(index)">{{item}}</div>
 	</div>
 </template>
 
@@ -29,15 +29,21 @@
 	justify-content: space-around;
 	.headers{
 		height: 100%;
+		width: 34%;
 		line-height: .68rem;
 		padding: .02rem 0;
 		text-align: center;
 		font-size: .3rem;
+		border: .01rem solid #ECE9E9;
+		border-bottom: .01rem solid #007857;
+
 	}
 	.spe{
 		border-top: .01rem solid #007857;
 		border-left: .01rem solid #007857;
 		border-right: .01rem solid #007857;
+		border-bottom: .01rem solid transparent;
+
 
 	}
 }

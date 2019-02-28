@@ -21,14 +21,10 @@
 		},
 		data() {
 			return {
-				abstract:["敲击扳手图片及敲击扳手和电动扳手的区别","敲击扳手规格型号、用途及其特点","卧式离子风机的原理及卧式离子风机的特点","液压拉马什么牌子好？液压拉马五个品牌介绍","液压扳手由什么组成？液压扳手的主要组成部分介绍"]
+				
 			};
 		},
-		methods:{
-			handleReturn(){
-				this.$on("handleReturn")
-			}
-		}
+	
 	}
 </script>
 
@@ -37,6 +33,7 @@
 	width: 100%;
 	padding: .24rem;
 	border: .01rem solid #007857;
+	border-top: 0;
 	margin-bottom: .24rem;
 	.choiceTop{
 		display: flex;
