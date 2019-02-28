@@ -1,6 +1,6 @@
 <template>
 	<div>
-		这个是二级页面
+			工具页的操作方式现在卡仕达卡萨达哈撒啊
 	</div>
 </template>
 
