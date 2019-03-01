@@ -3,11 +3,6 @@
         <div class="inpt">
           {{info}}
         </div>
-
-
-
-       
-
     </div>
 </template>
 
@@ -44,7 +39,7 @@ export default {
            height:0.65rem;
            background:#e3e3e3;
            color:#999;
-           font-size:28px;
+           font-size:0.33rem;
            line-height: 0.65rem;
            padding-left:0.2rem;
            border-radius:0.1rem;
