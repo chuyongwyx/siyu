@@ -2,6 +2,7 @@ import Vue from "vue";
 import Vuex from "vuex";
 import home from "./home";
 import classify from "./classify";
+import more from "./more"
 import message from "./message";
 Vue.use(Vuex);
 
@@ -19,7 +20,8 @@ const store = new Vuex.Store({
     modules:{
         home,
         classify,
-		message
+        more,
+		    message
     }
 })
 
