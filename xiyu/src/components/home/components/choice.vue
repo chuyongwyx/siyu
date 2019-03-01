@@ -33,6 +33,7 @@
 		updated(){
 //			console.log(this.$refs.item[1])
 			for(let i=0;i<this.$refs.item.length;i++){
+			
 			this.$nextTick(() => {
         			this.scroll = new Bscroll(this.$refs.item[i], {
         			scrollX:true,
