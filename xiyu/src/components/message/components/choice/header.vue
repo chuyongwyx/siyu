@@ -22,6 +22,7 @@
 </script>
 
 <style scoped lang="scss">
+	$color:#007857;
 .header{
 	width: 100%;
 	height: .68rem;
@@ -35,13 +36,14 @@
 		text-align: center;
 		font-size: .3rem;
 		border: .01rem solid #ECE9E9;
-		border-bottom: .01rem solid #007857;
+		border-bottom: .01rem solid $color;
 
 	}
 	.spe{
-		border-top: .01rem solid #007857;
-		border-left: .01rem solid #007857;
-		border-right: .01rem solid #007857;
+		color: $color;
+		border-top: .01rem solid $color;
+		border-left: .01rem solid $color;
+		border-right: .01rem solid $color;
 		border-bottom: .01rem solid transparent;
 
 
