@@ -16,6 +16,7 @@
 	<Choice></Choice>
 	<MessageInfo :info="info[3]"></MessageInfo>
 	<Recommend></Recommend>
+	<ChoiceFooter></ChoiceFooter>
   </div>
 </template>
 
@@ -26,13 +27,15 @@ import MessageInfo from "./components/messageInfo"
 import Rules from "./components/rules"
 import Choice from "./components/choice"
 import Recommend from "./components/recommend"
+import ChoiceFooter from "./components/choiceFooter"
 export default {
 	components:{
 		"Rules":Rules,
 		"Choice":Choice,
 		"Recommend":Recommend,
 		"MessageBanner":MessageBanner,
-		"MessageInfo":MessageInfo
+		"MessageInfo":MessageInfo,
+		"ChoiceFooter":ChoiceFooter
 	},
   data() {
     return {

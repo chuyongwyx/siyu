@@ -1,12 +1,21 @@
 <template>
+<<<<<<< HEAD
+		<div>
+			分类
+=======
 		<div class="classify">
 			<Header-com/>
 			<ContentLeft/>
 			<ConentRight/>
+>>>>>>> master
 		</div>
 </template>
 
 <script>
+<<<<<<< HEAD
+	export default{
+		
+=======
 	import Header from "./components/header"
 	import ContentLeft from "./components/cont-left"
 	import ContentRight from "./components/cont-right"
@@ -27,6 +36,7 @@
 			   }),
 			  
 		   }
+>>>>>>> master
 	}
 </script>
 

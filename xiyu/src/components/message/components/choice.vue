@@ -2,7 +2,6 @@
 	<div class="choiceSum">
 		<Header @handleReturn="returnValue"></Header>
 		<ChoiceOne :choice="choice[value]"></ChoiceOne>
-		<!-- <components :is=""></components> -->
 
 	</div>
 </template>
@@ -18,18 +17,6 @@
 		methods:{
 			returnValue(index){
 				this.value = index;
-// 				switch(index){
-// 				  case 0:
-// 				    
-// 				    break;
-// 				  case 1:
-// 				    
-// 				    break;
-// 				  case 2:
-// 				    
-// 				    break;
-// 				    default:
-// 				}
 			}
 		},
 		data() {
