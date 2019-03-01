@@ -1,43 +1,39 @@
 <template>
 		<div class="classify">
 			<Header-com/>
-			<Content-com/>
+			<ContentLeft/>
+			<ConentRight/>
 		</div>
 </template>
 
 <script>
 	import Header from "./components/header"
-	import Content from "./components/content"
+	import ContentLeft from "./components/cont-left"
+	import ContentRight from "./components/cont-right"
 	import Vuex from "vuex"
 	export default{
            components:{
 			   "Header-com":Header,
-			   "Content-com":Content,
+			   "ContentLeft":ContentLeft,
+			   "ConentRight":ContentRight
 		   },
-		   computed:{
-               ...Vuex.mapState({
-				   state:state=>state.classify,
-				   list:state=>state.classify.list
-			   })
-		   },
+		  
 		   created(){
-			   this.handleClassifyData();
-			//    this.handleRecommendImg();
+			   this.handleClassifyData();	
 		   },
 		   methods:{
 			   ...Vuex.mapActions({
-				   handleClassifyData:"classify/handleClassifyData"
+				   handleClassifyData:"classify/ClassifyHandleData"
 			   }),
-			   ...Vuex.mapActions({
-                    handleRecommendImg: "classify/handleRecommendImg"
-                 })
+			  
 		   }
 	}
 </script>
 
 <style scoped lang="scss">
-$color :red;
-div{
-	color: $color;
-}
+	.classify{
+		width: 100%;
+		height: 100%;
+		display: flex;
+	}
 </style>

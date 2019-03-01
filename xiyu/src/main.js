@@ -7,6 +7,8 @@ import './common/js/flexble'
 import './common/css/reset.css'
 import store from "./store"
 import "./assets/icon/iconfont.css"
+import Observer from './common/js/observer'
+Vue.prototype.Observer = Observer;
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
