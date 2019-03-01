@@ -34,6 +34,11 @@ export default {
        align-items: center;
        justify-content: center;
        border-bottom: 1px solid #999;
+       position: fixed;
+       z-index: 5;
+       top: 0;
+       left: 0;
+       background: #fff;
        .inpt{
            width:95%;
            height:0.65rem;
