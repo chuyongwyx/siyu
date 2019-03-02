@@ -6,18 +6,22 @@ import Message from '../components/message/message'
 import Cart from '../components/cart/cart'
 import My from '../components/my/my'
 import ErrorCom from '../components/error/error'
-import Tools from '../components/home/findclass/tools/tools'
-import Ppe from '../components/home/findclass/ppe/ppe'
-import Cleaning from '../components/home/findclass/cleaning/cleaning'
-import Office from '../components/home/findclass/office/office'
-import Lab from '../components/home/findclass/lab/lab'
-import Diya from '../components/home/findclass/diya/diya'
-import Bearing from '../components/home/findclass/bearing/bearing'
-import Pneummatic from '../components/home/findclass/pneummatic/pneummatic'
-import Instruments from '../components/home/findclass/instruments/instruments'
-import ChannelList from '../components/home/findclass/channel-list/channel-list' 
 
-import Ads from '../components/home/findclass/firstmore/more'
+/*首页下面的二级路由*/
+import Tools from '../components/home/findclass/tools/tools';
+import Ppe from '../components/home/findclass/ppe/ppe';
+import Cleaning from '../components/home/findclass/cleaning/cleaning';
+import Office from '../components/home/findclass/office/office';
+import Lab from '../components/home/findclass/lab/lab';
+import Diya from '../components/home/findclass/diya/diya';
+import Bearing from '../components/home/findclass/bearing/bearing';
+import Pneummatic from '../components/home/findclass/pneummatic/pneummatic';
+import Instruments from '../components/home/findclass/instruments/instruments';
+import ChannelList from '../components/home/findclass/channel-list/channel-list' ;
+
+import Ads from '../components/home/findclass/firstmore/more';
+
+import Position from '../components/home/findclass/position/position'
 Vue.use(Router)
 
 export default new Router({
@@ -52,6 +56,11 @@ export default new Router({
       component: My
     },
     //这里是二级页面中的路由配置
+    {
+    	path:'/position',
+    	name:'position',
+    	component:Position
+    },
     {
 		 	path:'/tools',
 			name:'tools',

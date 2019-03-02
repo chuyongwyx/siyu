@@ -53,8 +53,13 @@
 				}
 				event.path[0].style.background="#f5f5f5";	
 				this.kindid=event.target.getAttribute("kindid");
-				
+				//向右侧的商品列表发送传递的参数
 				this.Observer.$emit("handleIndex",this.kindid)
+				
+				//向左侧的商家的logo这边发送数据
+				let logoId = event.target.getAttribute('logoId');
+				//console.log(logoId)
+				this.Observer.$emit("handleLogoId",logoId)
 			}
 		}
 	}
