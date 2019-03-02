@@ -1,7 +1,9 @@
 <template>
 	<div class="cont-right">
 		<h3 class="tit">推荐品牌</h3>
-		<div class="logo">这个是最后操作</div>
+		<div class="logo">
+			<Contlogo/>
+		</div>
 		<div class="wrapper scrollimg" ref="scrollImg">
 			<div class="content scrollcon">
 				<div class="kinds" v-for="(item,index) in this.kinds[0][this.indexId].nodes">
@@ -22,9 +24,13 @@
 <script>
 	import Vuex from 'vuex'
 	import Bscroll from 'better-scroll'
+	import Contlogo from './cont-logo'
 	export default {
 		methods: {
 
+		},
+		components:{
+			"Contlogo":Contlogo
 		},
 		data() {
 			return {
@@ -36,7 +42,7 @@
 
 			this.Observer.$on('handleIndex', (value) => {
 				this.indexId = value;
-				console.log(this.kinds)
+				
 			})
 
 		},
