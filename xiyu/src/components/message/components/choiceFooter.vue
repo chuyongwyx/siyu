@@ -39,6 +39,5 @@
 	padding: .1rem;
 	border-top:.05rem solid #ece9e9;
 	border-bottom:.05rem solid #ece9e9;
-	margin-bottom: 2rem;
 }
 </style>
