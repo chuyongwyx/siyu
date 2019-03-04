@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <router-view/>
-    <Footer/>
+    <Footer  v-if="flag"/>
   </div>
 </template>
 
@@ -10,6 +10,14 @@
 export default {
 		components:{
 				"Footer":Footer
+		},
+		data(){
+			return{
+				   flag:true
+			}
+		},
+		updated(){
+			    this.flag = this.$route.meta.frag;
 		}
 }
 </script>

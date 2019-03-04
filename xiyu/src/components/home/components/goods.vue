@@ -43,7 +43,12 @@
 			}
 		},
 		created(){
-								
+			this.handleHomeData()			
+		},
+		methods:{
+			...Vuex.mapActions({
+				handleHomeData: "home/handleHomeData"
+			})
 		},
 		computed:{
 			...Vuex.mapState({
