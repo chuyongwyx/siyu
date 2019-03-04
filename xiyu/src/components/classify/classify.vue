@@ -3,11 +3,11 @@
 			<Header-com/>
 			<ContentLeft/>
 			<ConentRight/>
-
 		</div>
 </template>
 
 <script>
+
 	import Header from "./components/header"
 	import ContentLeft from "./components/cont-left"
 	import ContentRight from "./components/cont-right"
@@ -30,6 +30,9 @@
 		   }
 
 	}
+
+
+
 	
 </script>
 

@@ -1,6 +1,6 @@
 <template>
 		<div class="topBar" ref="header">
-				<div class="posi">
+				<div class="posi" @click="handleChoice()">
 						<i class="iconfont" v-html="icon"></i>
 						<span>北京</span>
 				</div>
@@ -25,6 +25,12 @@
 						desc:"产品名称 品牌 型号或者SKU号"
 				}
 			},
+			methods:{
+				handleChoice(){
+					
+					this.$router.push('/position')
+				}
+			}
 			
 
 			

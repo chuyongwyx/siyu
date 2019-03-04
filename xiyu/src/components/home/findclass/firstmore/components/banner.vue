@@ -4,7 +4,7 @@
       <img :src="imgSrc" alt>
     </div>
     <div class="btn">
-      <div @click="Toggle(index,$event)" v-show="flag" v-for="(item,index) in tabBar">{{item.txt}}</div>
+      <div @click="Toggle(index)" v-for="(item,index) in tabBar">{{item.txt}}</div>
     </div>
      <Timer-com/>
       <keep-alive>
@@ -46,22 +46,25 @@ export default {
     })
   },
   methods: {
-    Toggle(params,e) {
+    Toggle(params) {
       
-      switch (params) {
-        case 0:
-          this.currView = "ListImg-com";
-           e.target.style.backgroundColor = "#f00";
-          break;
-        case 1:
+      // switch (params) {
+      //   case 0:
+      //     this.currView = "ListImg-com";
+      //   case 1:
+      //     this.currView = "ArrImg-com";
+      //     break;
+      // }
+      if(params == "1"){
           this.currView = "ArrImg-com";
-           e.target.style.backgroundColor = "#f00";
-          break;
+          
+      }else{
+          this.currView = "ListImg-com";
       }
 
     }
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>

@@ -30,16 +30,16 @@
 	import Bscroll from 'better-scroll';
 	export default {
 		created() {
-			this.handleHomeData();
+//			this.handleHomeData();
 			this.handleHomeAdsData();
-			this.handleComProduct();
+			this.handleComProduct();	
 			
 		},
 		methods: {
 			...Vuex.mapActions({
-				handleHomeData: "home/handleHomeData",
+//				handleHomeData: "home/handleHomeData",
 				handleHomeAdsData: "home/handleHomeAdsData",
-				handleComProduct :"home/handleComProduct",
+				handleComProduct :"home/handleComProduct"
 			})
 
 		},

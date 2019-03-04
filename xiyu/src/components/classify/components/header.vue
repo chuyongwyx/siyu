@@ -14,9 +14,7 @@ export default {
         }
     },
     methods:{
-        // handleRouter(){
-        //     this.$router.push("/classify/input")
-        // }
+        
     }
 }
 </script>
