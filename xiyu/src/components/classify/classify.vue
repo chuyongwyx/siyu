@@ -1,5 +1,4 @@
 <template>
-
 		<div class="classify">
 			<Header-com/>
 			<ContentLeft/>
@@ -29,7 +28,11 @@
 			   }),
 			  
 		   }
-}
+
+	}
+
+
+
 	
 </script>
 
