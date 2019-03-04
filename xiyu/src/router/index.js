@@ -21,10 +21,15 @@ import ChannelList from '../components/home/findclass/channel-list/channel-list'
 
 import Ads from '../components/home/findclass/firstmore/more';
 
-import Position from '../components/home/findclass/position/position'
+import Position from '../components/home/findclass/position/position';
+
+//登录路由
+import Login from "../components/login/login";
 Vue.use(Router)
 
-export default new Router({
+
+
+const router= new Router({
   routes: [
   	{
   		path:'/',
@@ -34,87 +39,146 @@ export default new Router({
       path: '/home',
       name: 'home',
       component: Home,
+      meta:{
+      	frag:true
+      }
     },
     {
     	path:'/classify',
     	name:'classify',
       component: Classify,
+      meta:{
+      	frag:true
+      }
     },
     {
       path: '/message',
       name: 'message',
-      component: Message
+      component: Message,
+      meta:{
+      	frag:true
+      }
     },
     {
     	path:"/cart",
     	name:"cart",
-    	component:Cart
+    	component:Cart,
+    	meta:{
+      	frag:true
+      }
     },
     {
       path: '/my',
       name: 'my',
-      component: My
+      component: My,
+      meta:{
+      	frag:true
+      }
+    },
+    {
+    	path:'/login',
+    	name:'login',
+    	component:Login,
+    	meta:{
+    		frag:false
+    	}
     },
     //这里是二级页面中的路由配置
     {
     	path:'/position',
     	name:'position',
-    	component:Position
+    	component:Position,
+    	 meta:{
+      	 frag:false
+      }
     },
     {
 		 	path:'/tools',
 			name:'tools',
-    	component:Tools
+    	component:Tools,
+    	 meta:{
+      	frag:false
+      }
     },
     {
     	path:'/ppe',
     	name:'ppe',
-    	component:Ppe
+    	component:Ppe,
+    	meta:{
+      	frag:false
+      }
     },
     {
     	path:'cleaning',
     	name:'cleaning',
-    	component:Cleaning
+    	component:Cleaning,
+    	meta:{
+      	frag:false
+      }
     },
     {
     	path:'/office',
     	name:'office',
-    	component:Office
+    	component:Office,
+    	meta:{
+      	frag:false
+      }
     },
     {
     	path:'/lab',
     	name:'lab',
-    	component:Lab
+    	component:Lab,
+    	meta:{
+      frag:false
+      }
     },
     {
     	path:'/diya',
     	name:'diya',
-    	component:Diya
+    	component:Diya,
+    	meta:{
+      	frag:false
+      }
     },
     {
     	path:'/bearing',
     	name:'bearing',
-    	component:Bearing
+    	component:Bearing,
+    	meta:{
+      	frag:false
+      }
     },
     {
     	path:'/pneummatic',
     	name:'pneummatic',
-    	component:Pneummatic
+    	component:Pneummatic,
+    	 meta:{
+      		frag:false
+      }
     },
     {
     	path:'/instruments',
     	name:'instruments',
-    	component:Instruments
+    	component:Instruments,
+    	meta:{
+      		frag:false
+      }
     },
     {
     	path:'/channel-list',
     	name:'channel-list',
-    	component:ChannelList
+    	component:ChannelList,
+    	meta:{
+      		frag:false
+      }
     },
     {
     	path:'/more',
     	name:'more',
-    	component:Ads
+    	component:Ads,
+    	meta:{
+      	frag:false
+      }
     },
     {
     	path:'**',
@@ -122,3 +186,20 @@ export default new Router({
     }
   ]
 })
+
+   router.beforeEach((to,from,next)=>{
+
+     var routers = ["my"];
+//"position","tools","ppe","cleaning","office","lab","diya","bearing","pneummatic","instruments","channel-list","more"
+     if(routers.indexOf(to.name)!=-1){
+           let flag = to.meta.frag;
+
+           if(flag){
+             next('/login');
+           }
+  		 }else{
+       		next();
+     }
+   })
+   
+export default router
