@@ -21,11 +21,12 @@
 	export default {
 		data() {
 			return {
-					
+				
 			};
 		},
+		props:["send"],
 		created() {
-			this.handleSecondsData();
+			this.handleSecondsData(this.send);
 		},
 		methods: {
 			...Vuex.mapActions({

@@ -1,7 +1,7 @@
 <template>
 	<div class="homeAll">
 		<div class="headAll">
-			<span> < </span>
+			<span @click="turn()"> < </span>
 			<span>全部分类</span>
 			<span></span>
 		</div>
@@ -60,6 +60,11 @@
 					pull: true
 				});
 			}
+		},
+		methods:{
+			turn(){
+				this.$router.push('/home')
+			}
 		}
 
 
@@ -70,8 +75,8 @@
 	.homeAll {
 		width: 100%;
 		height: 100%;
-		background: red;
 		padding-top:.98rem;
+		background: #ffffff;
 		.headAll {
 			width: 100%;
 			height: .98rem;
@@ -94,14 +99,12 @@
 				p {
 					width: 100%;
 					height: .98rem;
-					background: blue;
 					line-height: .98rem;
 					padding: 0 .2rem;
 				}
 				.allForEach {
 					width: 100%;
 					padding: .1rem;
-					background: pink;
 					line-height: .7rem;
 					font-size: .3rem;
 					display: flex;

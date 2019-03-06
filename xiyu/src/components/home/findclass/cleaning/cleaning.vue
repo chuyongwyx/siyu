@@ -9,7 +9,7 @@
 				<Info :info="info[1]"></Info>
 				<InstruServer :send = "data"></InstruServer>		
 				<InstruNav></InstruNav>
-				<InstruGoods></InstruGoods>
+				<InstruGoods :send = "obj"></InstruGoods>
 			</div>
 
 		</div>
@@ -84,7 +84,15 @@
 						span: ""
 					},
 
-				]
+				],
+				obj:{
+					k: "",
+					pn: 1,
+					sort: 0,
+					fu: "",
+					cid: 16918,
+					pcid: 16918
+				}
 			}
 		},
 		components: {
