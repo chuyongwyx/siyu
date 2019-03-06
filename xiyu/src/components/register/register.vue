@@ -5,25 +5,43 @@
 			<h2 class="stit">西域注册</h2>
 		</div>
 		<div class="userform">
-			<div class="username"><span>账号</span><input type="text" placeholder="账户名/手机/邮箱" /></div>
-			<div class="psw"><span>密码</span><input type="password" placeholder="请输入密码" /></div>
-			<div class="confirm"><span>确认密码</span><input type="password" placeholder="请确认密码"/></div>
-			<button class="register">注册</button>
+			<div class="username"><span>账号</span><input type="text" placeholder="账户名/手机/邮箱"  v-model="username"/></div>
+			<div class="psw"><span>密码</span><input type="password" placeholder="请输入密码" v-model="password" /></div>
+			<!--<div class="confirm"><span>确认密码</span><input type="password" placeholder="请确认密码"/></div>-->
+			<button class="register" @click="handleRegister">注册</button>
 		</div>
 	</div>
 </template>
 
 <script>
+	import Vuex from "vuex"
 	export default {
 		data() {
 			return {
-				icon: "&#xe642;"
+				icon: "&#xe642;",
+				username:"",
+				password:""
 			}
 		},
 		methods: {
 			handleClick() {
 				this.$router.push('/login')
-			}
+			},
+			handleRegister(){
+				
+				let user ={
+					"userName":this.username,
+					"passWord":this.password
+				}
+				this.handleRegSucc(user);
+					alert('注册成功');
+					this.$router.push('/login');
+			},
+			
+			...Vuex.mapActions({
+					handleRegSucc:'register/handleRegSuccData'
+			})
+			
 		}
 	}
 </script>

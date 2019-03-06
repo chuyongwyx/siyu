@@ -11,6 +11,11 @@ import seconds from "./seconds";
 
 import Cart from "./cart";
 
+
+
+import register from "./register";
+import  login from "./login";
+
 Vue.use(Vuex);
 
 let state = {};
@@ -31,9 +36,15 @@ const store = new Vuex.Store({
 		message,
 		Position,
 
+
 		seconds,
 
-		Cart
+		Cart,
+
+		register,
+		login,
+		
+
 	
 
 		
