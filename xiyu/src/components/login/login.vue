@@ -3,9 +3,9 @@
 		<div class="header"><span class="s1" @click="handleClick()"><i class="iconfont" v-html="icon"></i></span><span class="s2">输入手机直接登录或注</span></div>
 
 		<div class="userform">
-			<div class="username"><span>账号</span><input type="text" placeholder="账户名/手机/邮箱" /></div>
-			<div class="psw"><span>密码</span><input type="password" placeholder="请输出密码" /></div>
-			<button class="login">登录</button>
+			<div class="username"><span>账号</span><input type="text" placeholder="账户名/手机/邮箱" v-model="username"/></div>
+			<div class="psw"><span>密码</span><input type="password" placeholder="请输出密码" v-model="password" /></div>
+			<button class="login" @click="handleLogin()">登录</button>
 			<div @click="handleToClick()">
 				<a href="##" class="reg">注册</a>
 			</div>
@@ -14,10 +14,13 @@
 </template>
 
 <script>
+	import Vuex from 'vuex';
 	export default {
 		data() {
 			return {
-				icon: "&#xe612;"
+				icon: "&#xe612;",
+				username:"",
+				password:""
 			}
 		},
 
@@ -27,8 +30,26 @@
 			},
 			handleToClick(){
 				this.$router.push('/register')
-			}
-			
+			},
+			handleLogin(){
+				
+				for(let i=0,len=this.data.length;i<len;i++){
+					if(this.data[i].userName == this.username && this.data[i].passWord == this.password){
+						alert('登录成功')
+						return
+					}else{
+						if( i == len-1){
+							alert('用户不存在')
+						}
+					}
+				}
+			},
+		},
+		
+		computed:{
+			...Vuex.mapState({
+					data:state=>state.register.userInfo
+			})
 		}
 	}
 </script>
