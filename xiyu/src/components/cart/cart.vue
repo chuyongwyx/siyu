@@ -7,7 +7,7 @@
 				
 				<div class="info" v-if="frag">
 					<span class="s1">购物车是空的,你可以</span>
-					<span class="s2">立即逛逛</span>
+					<span class="s2" @click="handleToHome()">立即逛逛</span>
 				</div>	
 				
 				<div v-if="frag">
@@ -141,6 +141,9 @@
 				this.allsend = Math.abs(this.allsend - this.addcount);
 			}
 				
+			},
+			handleToHome(){
+				this.$router.push('/home')
 			}
 				
 			

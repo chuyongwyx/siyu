@@ -32,23 +32,34 @@
 				this.$router.push('/register')
 			},
 			handleLogin(){
-				
-				for(let i=0,len=this.data.length;i<len;i++){
-					if(this.data[i].userName == this.username && this.data[i].passWord == this.password){
-						alert('登录成功')
-						return
-					}else{
-						if( i == len-1){
-							alert('用户不存在')
+				let userInfo ={
+					"userName":this.username,
+					"passWord":this.password	
+				}
+				this.handleLoginSucc(userInfo)
+				if(this.userInfo){
+					alert('登录成功');
+					
+					this.$router.push({
+						name:"my",
+						query:{
+							"user":this.user
 						}
-					}
+					})
+					
+				}else{
+					
 				}
 			},
+			...Vuex.mapActions({
+					handleLoginSucc:'login/handleLoginSucc'
+			})
 		},
 		
 		computed:{
 			...Vuex.mapState({
-					data:state=>state.register.userInfo
+					userInfo: state=>state.login.userInfo,
+					user: state=>state.login.username
 			})
 		}
 	}

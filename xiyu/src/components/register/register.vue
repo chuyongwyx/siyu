@@ -20,29 +20,45 @@
 			return {
 				icon: "&#xe642;",
 				username:"",
-				password:""
+				password:"",
+				
 			}
+		},
+		created(){
+			
+
 		},
 		methods: {
 			handleClick() {
 				this.$router.push('/login')
 			},
-			handleRegister(){
+		 	handleRegister(){
 				
 				let user ={
 					"userName":this.username,
 					"passWord":this.password
 				}
 				this.handleRegSucc(user);
-					alert('注册成功');
-					this.$router.push('/login');
+				if(this.registerInfo){
+						alert('注册成功');
+						this.$router.push('/login')
+					}else{
+						alert('用户已注册');
+					}
+					
 			},
 			
 			...Vuex.mapActions({
 					handleRegSucc:'register/handleRegSuccData'
+			}),	
+		},
+		computed:{
+			...Vuex.mapState({
+					registerInfo : state=>state.register.registerInfo
 			})
-			
 		}
+		
+		
 	}
 </script>
 
