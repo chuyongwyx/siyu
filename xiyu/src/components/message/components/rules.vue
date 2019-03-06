@@ -45,6 +45,8 @@
 <style scoped lang="scss">
 .messageRules{
 	width:100%;
+	background: #ffffff;
+	padding: .13rem 0;
 	.rules{
 		width: 96%;
 		padding: .2rem;
