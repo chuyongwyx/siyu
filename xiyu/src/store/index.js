@@ -6,6 +6,8 @@ import more from "./more"
 import message from "./message";
 import Position from "./position";
 import Cart from "./cart";
+import register from "./register";
+import  login from "./login";
 Vue.use(Vuex);
 
 let state = {};
@@ -25,7 +27,10 @@ const store = new Vuex.Store({
         more,
 		message,
 		Position,
-		Cart
+		Cart,
+		register,
+		login
+		
 	
 		
     }
