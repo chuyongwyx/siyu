@@ -25,8 +25,12 @@ import Position from '../components/home/findclass/position/position';
 
 //登录路由
 import Login from "../components/login/login";
-Vue.use(Router)
+//注册路由
+import Register from "../components/register/register";
+//详情页面
+import Details from "../components/details/details";
 
+Vue.use(Router)
 
 
 const router= new Router({
@@ -82,6 +86,17 @@ const router= new Router({
     	meta:{
     		frag:false
     	}
+    },
+    {
+    	path:'/register',
+    	name:'register',
+    	component:Register
+    },
+    {
+    	path:'/details/:GoodId',
+    	name:'details',
+    	component:Details,
+    	props:true
     },
     //这里是二级页面中的路由配置
     {

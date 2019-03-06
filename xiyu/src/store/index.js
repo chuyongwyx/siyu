@@ -5,7 +5,11 @@ import classify from "./classify";
 import more from "./more"
 import message from "./message";
 import Position from "./position";
+
 import seconds from "./seconds";
+
+
+import Cart from "./cart";
 
 Vue.use(Vuex);
 
@@ -26,7 +30,12 @@ const store = new Vuex.Store({
         more,
 		message,
 		Position,
-		seconds
+
+		seconds,
+
+		Cart
+	
+
 		
     }
 })

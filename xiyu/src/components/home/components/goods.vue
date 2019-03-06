@@ -3,7 +3,7 @@
 	<div class="think-wrap">
 			<h2 class="think"><span></span><span>西域热推·选你所想</span></h2>
 			<ul class="goods">
-				<li v-for="(item,index) in data">
+				<li v-for="(item,index) in data" @click="handleClick(index)">
 					<div class="imgs"><img :src="item.pictureUrl" alt="" /></div>
 					<div class="goodsInfo">{{item.productName}}</div>
 					<div class="price"><span>￥{{item.salePrice}}</span><i class="iconfont" v-html="icon"></i></div>
@@ -23,6 +23,7 @@
 
 <script>
 	import Vuex from 'vuex';
+	
 	export default{
 		data(){
 			return{
@@ -48,7 +49,17 @@
 		methods:{
 			...Vuex.mapActions({
 				handleHomeData: "home/handleHomeData"
-			})
+			}),
+			
+			handleClick(index){
+				
+				this.$router.push({
+					
+					name:"details",
+        			params:{GoodId:index}
+				})
+			}
+			
 		},
 		computed:{
 			...Vuex.mapState({
