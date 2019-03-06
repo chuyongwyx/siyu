@@ -202,19 +202,18 @@ const router= new Router({
   ]
 })
 
-   router.beforeEach((to,from,next)=>{
-
-     var routers = ["my"];
-//"position","tools","ppe","cleaning","office","lab","diya","bearing","pneummatic","instruments","channel-list","more"
-     if(routers.indexOf(to.name)!=-1){
-           let flag = to.meta.frag;
-
-           if(flag){
-             next('/login');
-           }
-  		 }else{
-       		next();
-     }
-   })
+// router.beforeEach((to,from,next)=>{
+//
+//   var routers = ["my"];
+//   if(routers.indexOf(to.name)!=-1){
+//         let flag = to.meta.frag;
+//
+//         if(flag){
+//           next('/login');
+//         }
+//		 }else{
+//     		next();
+//   }
+// })
    
 export default router

@@ -35,12 +35,8 @@ const store = new Vuex.Store({
         more,
 		message,
 		Position,
-
-
 		seconds,
-
 		Cart,
-
 		register,
 		login,
 		
