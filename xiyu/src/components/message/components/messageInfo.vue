@@ -31,6 +31,7 @@
     justify-content: space-between;
     align-items: center;
 	border:.13rem solid $color;
+	background: #ffffff;
     .messageNav{
 			display: flex;
       div{

@@ -40,22 +40,21 @@
 
 <style scoped lang="scss">
 	.recommend {
-		width: 100%;
-		padding: 0 0.13rem 0.13rem 0.13rem;
-		background: #ece9e9;
+		width: 97%;
+		margin: 0 0.13rem 0.13rem 0.13rem;
 		display: flex;
 		justify-content: space-between;
 		flex-wrap: wrap;
 	
 
 		.recLi {
-			width: 49%;
+			width: 48.3%;
 			padding: .25rem;
 			background: #FFFFFF;
 			display: flex;
 			flex-direction: column;
 			align-item: center;
-			margin-bottom:.15rem;
+			margin:.05rem;
 			.recImg {
 				width: 3.1rem;
 				height: 3.1rem;

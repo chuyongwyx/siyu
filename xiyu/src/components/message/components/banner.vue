@@ -39,6 +39,7 @@
 .messageSwiper {
 	width: 100%;
 		height:3.4rem;
+		background: #ffffff;
 		.messageWrapper {
 			padding: 0.1rem;
 			height:100%;
