@@ -7,7 +7,7 @@
 				<div class="search">
 					{{desc}}	
 				</div>
-				<div class="new">
+				<div class="new" @click="handleToMess()">
 						<i class="iconfont" v-html="icon1"></i>
 						<span>{{news}}</span>
 				</div>
@@ -29,7 +29,11 @@
 				handleChoice(){
 					
 					this.$router.push('/position')
+				},
+				handleToMess(){
+					this.$router.push('/message')
 				}
+				
 			}
 			
 
