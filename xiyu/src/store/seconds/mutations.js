@@ -1,5 +1,5 @@
 export default {
     handleSecondsAcc(state,data){
-		state.data=data.queryPage.data
+		state.data = state.data.concat(data.queryPage.data);
 	}
 }

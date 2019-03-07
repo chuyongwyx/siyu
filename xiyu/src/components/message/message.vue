@@ -80,6 +80,7 @@ export default {
 $color: #ece9e9;
 .message {
   width: 100%;
+  height: 100%;
   padding-top: .88rem;
 	.sou{
 			position: fixed;
@@ -93,10 +94,11 @@ $color: #ece9e9;
 	  border-bottom: 0.01rem solid #c3c3c3;
 	}
 	.wrapper{
-		height:300px;
+		height:100%;
 		.content{
-			
+			padding-bottom: .98rem;
 		}
+		
 	}
   
 }

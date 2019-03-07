@@ -93,9 +93,9 @@
 		
 		}
 		.wrapper {
-			height: 300px;
+			height: 100%;
 			.content {
-				
+				padding-bottom: .98rem;
 				p {
 					width: 100%;
 					height: .98rem;

@@ -7,7 +7,7 @@
 				<i></i>
 				<span>2017-1-11</span>
 				<i></i>
-				<span>阅读量（）</span>
+				<span>阅读量（3128）</span>
 			</div>
 		</div>
 	</div>
