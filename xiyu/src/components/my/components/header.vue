@@ -1,12 +1,22 @@
 <template>
 	<div class = "header">
+
 		<a href="##" @click="handleBack()"><i class = "iconfont">&#xe64b;</i></a>
 		<span>会员中心</span>
 		<div>
 			<routerLink to = "/home">
-				<a href="##"><i class = "iconfont">&#xe614;</i></a>
+			<a href="##"><i class = "iconfont">&#xe614;</i></a>
 			</routerLink>
 			<a href="##"><i class = "iconfont">&#xe643;</i></a>
+
+		<a href="##" @click="handleBack()"><i class = "iconfont">&#xe65a;</i></a>
+		<span>会员中心</span>
+		<div>
+			<routerLink to = "/home">
+				<a href="##"><i class = "iconfont">&#xe62a;</i></a>
+			</routerLink>
+			<a href="##"><i class = "iconfont">&#xe787;</i></a>
+
 		</div>
 	</div>
 </template>

@@ -2,7 +2,11 @@
 	<div class = "list">
 		<div class = "money">
 			<div class = "money_left">
+
 				<i class = "iconfont">&#xe667;</i>
+
+				<i class = "iconfont">&#xe64c;</i>
+
 				<div class = "yue">
 					<p class = "xianjin">我的现金券</p>
 					<p class = "jifen">积分余额：0</p>
@@ -20,7 +24,11 @@
 					<i class = "iconfont" v-html = "item.icon"></i>
 					<span>{{item.name}}</span>
 				</div>
+
 				<i class = "iconfont">&#xe735;</i>
+
+				<i class = "iconfont">&#xe6e0;</i>
+
 			</div>
 		</div>
 	</div>
@@ -32,6 +40,7 @@
 			return{
 				lists:[
 					{
+
 						icon:"&#xe631;",
 						name:"个人资料"
 					},
@@ -53,6 +62,29 @@
 					},
 					{
 						icon:"&#xe679;",
+
+						icon:"&#xe61d;",
+						name:"个人资料"
+					},
+					{
+						icon:"&#xe638;",
+						name:"我的团购"
+					},
+					{
+						icon:"&#xe681;",
+						name:"我的收藏"
+					},
+					{
+						icon:"&#xe626;",
+						name:"我的验光单"
+					},
+					{
+						icon:"&#xe61b;",
+						name:"收货地址"
+					},
+					{
+						icon:"&#xe60c;",
+
 						name:"密码管理"
 					}
 				]
@@ -90,6 +122,9 @@
 <style lang="scss" scoped>
 	.list{
 		width:100%;
+
+		margin-top: 1.2rem;
+
 		.money{
 			width:100%;
 			height:1.2rem;

@@ -7,14 +7,18 @@
 				
 				<div class="info" v-if="frag">
 					<span class="s1">购物车是空的,你可以</span>
-					<span class="s2">立即逛逛</span>
+					<span class="s2" @click="handleToHome()">立即逛逛</span>
 				</div>	
 				
 				<div v-if="frag">
 					<ShopList ></ShopList>
 				</div>
 				
-				<div v-for="(item,index) in data" class="goodslist">
+				
+			<div class="wrapper del" ref="item" v-for="(item,index) in data">
+				<div class="content del-con">
+				
+				<div class="goodslist">
 					<span class="font-ico"><i class="iconfont" v-html="icon"></i></span>
 					<div class="imgs"><img :src="item.imgsrc" alt="" /></div>
 					<div class="infoGoods">
@@ -25,6 +29,12 @@
 							<div class="p2"><span class="salePrice">￥{{item.salePrice}}</span> <p class="compu"><span @click="handleRed(index,item.salePrice)">-</span><span>{{count[index]}}</span><span @click="handleAdd(index,item.salePrice)">+</span></p></div>
 					</div>
 				</div>
+				<div class="remove-list" @click="handleDel(index)">删除</div>
+				</div>
+				
+				</div>
+				
+				
 				
 			</div>
 		</div>
@@ -58,7 +68,6 @@
 				icon:"&#xe659;",
 				GoodsInfo:{},
 				Goods:[],
-				frag:"true",
 				addcount:"0",
 				allsend:"300.00",
 				count:[],
@@ -67,9 +76,7 @@
 		components:{
 			"ShopList":ShopList,
 		},
-		
 		created(){
-			this.frag=this.data[0].frag;
 			let allPrice =0
 			for(let i=0,len=this.data.length;i<len;i++){
 				this.count.push(this.data[i].count);
@@ -83,6 +90,7 @@
 			}else{
 				this.allsend = this.allsend - this.addcount;
 			}
+			
 		},
 		
 		mounted(){
@@ -92,15 +100,24 @@
 					click:true
 				})
 			})
-		},
-	
-	
-		updated(){
+			
+		for(let i=0;i<this.$refs.item.length;i++){
+			
+			this.$nextTick(() => {
+        			this.scroll = new Bscroll(this.$refs.item[i], {
+        			scrollX:true,
+        			})
+        		
+      		})
+			}
+			
 			
 		},
+	
 		computed:{
 			...Vuex.mapState({
-				data:state=>state.Cart.goodInfo
+				data:state=>state.Cart.goodInfo,
+				frag:state=>state.Cart.frag
 			})
 		},
 		methods:{
@@ -141,6 +158,26 @@
 				this.allsend = Math.abs(this.allsend - this.addcount);
 			}
 				
+			},
+			handleDel(index){
+				this.data = this.data.splice(index,1);
+				this.count =this.count.splice(index,1);
+				let allPrice =0
+			for(let i=0,len=this.data.length;i<len;i++){
+				this.count.push(this.data[i].count);
+				allPrice += parseInt(this.data[i].salePrice) *this.data[i].count;
+				
+				
+			}
+			this.addcount=allPrice;
+				
+				
+				
+			},
+			
+			
+			handleToHome(){
+				this.$router.push('/home')
 			}
 				
 			
@@ -252,9 +289,9 @@
 			
 	}
 	.goodslist{
-		width:95%;
-		margin: 0.2rem auto;
-		
+		width:100%;
+/*		margin: 0.1rem ;*/
+		margin-right: 0;
 		height: 2.84rem;
 		background: #fff;
 		display: flex;
@@ -309,5 +346,26 @@
 	.p2 p span:nth-of-type(3){
 			padding: 0.1rem;
 			border: 1px solid gray;
+	}
+	.del{
+			width:95%;
+			margin: 0 auto;
+			margin-top: 0.1rem;
+			overflow: hidden;
+			/*padding: 0.1rem;*/
+			
+	}
+	.del-con{
+				width:max-content;
+				display: flex;
+	}
+	.remove-list{
+					width:1.5rem;
+					height:2.84rem;
+					background: red;
+					color: #fff;
+					line-height: 2.84rem;
+					text-align: center;
+					font-size: .40rem;
 	}
 </style>

@@ -19,6 +19,14 @@ module.exports = {
         }
      },
      
+     "/user":{
+     		target:"http://localhost:9000",
+     		changeOrigin:true,
+     		pathRewrite:{
+     			"^/user":""
+     		}
+     }
+     
     },
 
     // Various Dev Server settings

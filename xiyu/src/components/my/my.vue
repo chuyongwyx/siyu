@@ -7,17 +7,40 @@
 </template>
 
 <script>
+
 	import Vuex from "vuex";
 	import Header from "./components/header";
 	import Top from "./components/top";
-	import List from "./components/list"
-	
-	export default {
+	import List from "./components/list";
+	import cookie from 'js-cookie';
+	import Vue from 'vue';
+	export default{
+
 		components : {
 			"Header-com" : Header,
 			"Top-com" : Top,
 			"List-com" : List
-		}
+
+		},
+
+		
+		created(){
+				console.log(cookie.get('token'))
+			},
+		  methods:{
+		
+		 },
+		   	
+		beforeRouteEnter(to,from,next){
+     				if(cookie.get('token')){
+     					next();
+     				}else{
+						
+						next('\login')
+     				}
+     		
+     	}
+
 	}
 </script>
 

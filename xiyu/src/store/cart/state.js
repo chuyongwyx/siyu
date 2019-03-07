@@ -1,3 +1,4 @@
 export default{
-		goodInfo:[]
+		goodInfo:[],
+		frag:true
 }

@@ -141,7 +141,7 @@
 						query:{
 							GoodId:this.GoodId,
 							count:this.count,
-							frag:false
+							
 						}
 					})
 				}
@@ -156,7 +156,7 @@
 					 "stockValue":this.stockValue,
 					 "salePrice":this.price,
 					 "count":this.count,
-					 "frag":false
+					 
 				}
 				
 				this.handleAdd(Goods);
