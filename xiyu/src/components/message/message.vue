@@ -52,6 +52,8 @@ export default {
 		 }
 	},
   data() {
+	  
+	  
     return {
 		info:[
 			{
@@ -97,6 +99,7 @@ $color: #ece9e9;
 		height:100%;
 		.content{
 			padding-bottom: .98rem;
+			width: 100%;
 		}
 		
 	}
