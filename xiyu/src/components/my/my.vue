@@ -1,7 +1,7 @@
 <template>
 	<div class = "preson">
 		<Header-com/>
-		<Top-com/>
+		<!-- <Top-com/> -->
 		<List-com/>
 	</div>
 </template>
@@ -10,7 +10,7 @@
 
 	import Vuex from "vuex";
 	import Header from "./components/header";
-	import Top from "./components/top";
+	// import Top from "./components/top";
 	import List from "./components/list";
 	import cookie from 'js-cookie';
 	import Vue from 'vue';
@@ -18,7 +18,7 @@
 
 		components : {
 			"Header-com" : Header,
-			"Top-com" : Top,
+			// "Top-com" : Top,
 			"List-com" : List
 
 		},
